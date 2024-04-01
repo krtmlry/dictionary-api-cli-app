@@ -1,14 +1,12 @@
 # Dictionary CLI app
 
 ## About
----
 This is the updated version of my previous dictionary cli app. The old cli app only returns the first available meaning. This new version can return all meanings which are grouped by according to its part of speech function.
 
 The old version of the this code can be seen here:
 > link: https://github.com/krtmlry/PY4E/tree/254801f58bb98be47e04118d9ac7aa99b27735df/dictionary_api
 
 ## Major changes
----
 ### 1. User input data validation
 A. Proper use of try-except block replaced if-else statements that are functioning well but does not fit the given scenario. The previous code did not validate data on the user level but instead, it just sends the request(url+input) to the api and lets the api to validate the request.
 
@@ -73,3 +71,7 @@ def process_input(word):
             return res
 ```
 > This new approach will now validate the user input before it passes it to `process_input()` function to send the API request.
+
+### User enters a valid word
+![new-main-flow](https://github.com/krtmlry/dictionary-api-cli-app/blob/main/img/new-main-flow.png)
+> User enters the word "Hello" and all availabe definitions are displayed.
