@@ -72,6 +72,8 @@ def process_input(word):
 ```
 > This new approach will now validate the user input before it passes it to `process_input()` function to send the API request.
 
+## App functions demo
+
 ### User enters a valid word
 ![new-main-flow](https://github.com/krtmlry/dictionary-api-cli-app/blob/main/img/new-main-flow.png)
 > User enters the word "Hello" and all availabe definitions are displayed.
