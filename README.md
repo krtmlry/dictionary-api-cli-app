@@ -82,3 +82,10 @@ def process_input(word):
 ![new-data-validation](https://github.com/krtmlry/dictionary-api-cli-app/blob/main/img/new-datavalidation.png)
 > The new data validation works by using the `isaplha()` method, which will only return `True` if the user input only contains alphabet letters from (a-z)
 
+### Enter new word
+![enter-new-word](https://github.com/krtmlry/dictionary-api-cli-app/blob/main/img/new-main-twowords-flow.png)
+> After all the definitions are given, the program prompts the user again if they want to search for a word again.
+
+### Word not found
+![new-word-not-found](https://github.com/krtmlry/dictionary-api-cli-app/blob/main/img/new-wordnotfound.png)
+> When a word is not found the api response type would be in a form of a dictionary. The function `get_word()` will identify the data type and proceed accordingly.
