@@ -57,7 +57,7 @@ def data_catalog(data_list):
 
 def display_meanings(data_cat,word):
     word = word.casefold().capitalize()
-    print(f"\nDefinitions for '{word}':")
+    print("\nDefinitions:")
     for key,values in data_cat.items():
         print(f"\n'{word}' ({key})")
         for item in values:
