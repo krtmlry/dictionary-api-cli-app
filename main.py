@@ -5,10 +5,11 @@ import json
 def get_input():
     while True:
         try:
+            print("\nDictionary CLI app")
             print("\n*** Type 'YY' to exit. ***")
             word = input("Enter a word: ").upper()
             if not word.isalpha():
-                raise ValueError("Empty characters, words with spaces and numbers are not allowed.\n")
+                raise ValueError("ERROR: Empty characters, words with spaces and numbers are not allowed.\n")
             else:
                 return word
         except ValueError as e:
@@ -19,13 +20,14 @@ def process_input(word):
     res = requests.get(url+word)
     while True:
         if word == 'YY':
-            print('Exiting program...')
+            print('Exiting program...\n')
             break
         else:
             return res
 
 def get_word(res):
     json_data = json.loads(res.text)
+    #check datatype of api response, if word is found or valid it will return a list type response.
     if isinstance(json_data, dict):
         print("Sorry, this word is not available in our dictionary.")
         return None
@@ -56,15 +58,14 @@ def data_catalog(data_list):
     return data_cat
 
 def display_meanings(data_cat,word):
-    print("\nDefinitions")
+    print("\nDefinitions:")
+    word = word.casefold().capitalize()
     for key,values in data_cat.items():
         print(f"\n'{word}' ({key})")
-    # for item in enumerate(values,start=1):
-    #     print(item)
         for item in values:
             idx = values.index(item)
             print(f"{idx+1}. {item}")
-        print("--end--")
+        # print("\n")
 
 def main():
     while True:
