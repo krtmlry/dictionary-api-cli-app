@@ -5,7 +5,7 @@ This is the updated version of my previous dictionary cli app. The old cli app o
 
 The old version of the this code can be seen here:
 > link: https://github.com/krtmlry/PY4E/tree/254801f58bb98be47e04118d9ac7aa99b27735df/dictionary_api
-
+---
 ## Major changes
 ### 1. User input data validation
 A. Proper use of try-except block replaced if-else statements that are functioning well but does not fit the given scenario. The previous code did not validate data on the user level but instead, it just sends the request(url+input) to the api and lets the api to validate the request.
@@ -77,3 +77,8 @@ def process_input(word):
 ### User enters a valid word
 ![new-main-flow](https://github.com/krtmlry/dictionary-api-cli-app/blob/main/img/new-main-flow.png)
 > User enters the word "Hello" and all availabe definitions are displayed.
+
+### New data validation
+![new-data-validation](https://github.com/krtmlry/dictionary-api-cli-app/blob/main/img/new-datavalidation.png)
+> The new data validation works by using the `isaplha()` method, which will only return `True` if the user input only contains alphabet letters from (a-z)
+
