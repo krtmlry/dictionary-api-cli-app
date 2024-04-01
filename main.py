@@ -65,7 +65,6 @@ def display_meanings(data_cat,word):
         for item in values:
             idx = values.index(item)
             print(f"{idx+1}. {item}")
-        # print("\n")
 
 def main():
     while True:
