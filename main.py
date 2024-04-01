@@ -27,11 +27,9 @@ def process_input(word):
 
 def get_word(res):
     json_data = json.loads(res.text)
-    #check datatype of api response, if word is found or valid it will return a list type response.
     if isinstance(json_data, dict):
         print("Sorry, this word is not available in our dictionary.")
         return None
-    
     if isinstance(json_data, list):
         return json_data
 
